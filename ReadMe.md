@@ -1,19 +1,15 @@
 ## API Testing (Postman)
 
-### Create Invoice
+- **Postman Tests:**
 
-Tested invoice creation with valid customer, date, and product details.  
-![Create Invoice](createInvoice_test.png)
+  - `createInvoice_test.png` – Invoice creation API tested successfully.
+  - `createPayment_test.png` – Payment creation API tested successfully.
+  - `createDeliveryBoy_test.png` – Delivery boy creation API tested successfully.
 
-### Create Payment
-
-Tested payment recording for a customer.  
-![Create Payment](createPayment_test.png)
-
-### Create Delivery Boy
-
-Tested adding a delivery boy with assigned areas and issued bottles.  
-![Create Delivery Boy](createDeliveryBoy_test.png)
+- **Database Entries (MongoDB Compass):**
+  - `deliveryBoy_Db.png` – Delivery boy record inserted.
+  - `invoices_Db.png` – Invoice record inserted.
+  - `payments_Db.png` – Payment record inserted.
 
 ## Project Structure
 
