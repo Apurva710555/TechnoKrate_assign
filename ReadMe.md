@@ -1,28 +1,38 @@
-## API Testing (Postman)
+# API Testing (Postman)
 
-- **Postman Tests:**
+## Create Invoice
 
-  - `createInvoice_test.png` – Invoice creation API tested successfully.
-  - `createPayment_test.png` – Payment creation API tested successfully.
-  - `createDeliveryBoy_test.png` – Delivery boy creation API tested successfully.
+Tested invoice creation with valid customer, date, and product details.  
+![Create Invoice](createInvoice_test.png)  
+**Database After Invoice Creation:**  
+![Invoices DB](invoices_Db.png)
 
-- **Database Entries (MongoDB Compass):**
-  - `deliveryBoy_Db.png` – Delivery boy record inserted.
-  - `invoices_Db.png` – Invoice record inserted.
-  - `payments_Db.png` – Payment record inserted.
+## Create Payment
+
+Tested payment recording for a customer.  
+![Create Payment](createPayment_test.png)  
+**Database After Payment Recording:**  
+![Payments DB](payments_Db.png)
+
+## Create Delivery Boy
+
+Tested adding a delivery boy with assigned areas and issued bottles.  
+![Create Delivery Boy](createDeliveryBoy_test.png)  
+**Database After Adding Delivery Boy:**  
+![Delivery Boy DB](deliveryBoy_Db.png)
 
 ## Project Structure
 
 - **app/**
 
-  - **controllers/** – Contains logic for handling requests and responses (e.g., `paymentController.js`).
+  - **controllers/** – Logic for handling requests and responses (e.g., `paymentController.js`).
   - **models/** – Mongoose models for database collections (`DeliveryBoy.js`, `Invoice.js`, `Payment.js`).
-  - **routes/** – Defines API endpoints and maps them to controllers (`deliveryBoyRoute.js`, `invoiceRoute.js`, `paymentRoute.js`).
+  - **routes/** – API endpoints mapped to controllers (`deliveryBoyRoute.js`, `invoiceRoute.js`, `paymentRoute.js`).
   - **utils/** – Utility functions for validation (`validateDeliveryBoy.js`, `validateInvoice.js`, `validatePayment.js`).
 
 - **.env** – Environment variables configuration.
-- **server.js** – Entry point of the application; starts the server and connects routes.
+- **server.js** – Entry point; starts the server and connects routes.
 - **package.json** – Project dependencies and scripts.
 - **.gitignore** – Files/folders ignored by Git.
-- **create\*\_test.png** – API testing screenshots.
+- **createtest.png** – API testing screenshots.
 - **ReadMe.md** – Project documentation.
