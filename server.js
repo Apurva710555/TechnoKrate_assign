@@ -1,17 +1,13 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const dotenv = require("dotenv");
-const invoiceRoutes = require("./app/routes/invoiceRoute");
-const deliveryBoyRoutes = require("./app/routes/deliveryBoyRoute");
-const paymentRoutes = require("./app/routes/paymentRoute");
+const route = require("./app/routes/route");
 
 dotenv.config();
 const app = express();
 
 app.use(express.json());
-app.use("/", invoiceRoutes);
-app.use("/", deliveryBoyRoutes);
-app.use("/", paymentRoutes);
+app.use("/", route);
 
 mongoose
   .connect(process.env.MONGO_URI)
