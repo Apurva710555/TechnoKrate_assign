@@ -3,7 +3,7 @@ const validateInvoiceData = require("../utils/validateInvoice");
 
 async function createInvoice(req, res) {
   try {
-    if (!reqbody) {
+    if (!req.body) {
       return res
         .status(400)
         .json({ success: false, message: "Request body is empty" });
@@ -21,7 +21,6 @@ async function createInvoice(req, res) {
       .status(500)
       .send(`Error occured while updating the user: ${error.message}`);
   }
-  res.send("this is createInvoice API");
 }
 
 module.exports = createInvoice;

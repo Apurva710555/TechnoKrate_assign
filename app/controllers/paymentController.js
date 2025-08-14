@@ -3,7 +3,6 @@ const validatePaymentData = require("../utils/validatePayment");
 
 async function createPayment(req, res) {
   try {
-    console.log(req.body.date);
     if (!req.body) {
       return res
         .status(400)
